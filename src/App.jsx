@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { allHeroes } from './HeroData'
-
 import './App.css'
 
 const App = () => {
@@ -37,6 +36,7 @@ const App = () => {
          
         <div>
           <h3>All Heroes</h3>
+           {/* it's mapping throught all heroes */}
           {allHeroes.map((heroInfo,index) => {
             return <HeroCard key={index} heroObj={heroInfo} faveFunc ={handleAddToFaves}/>
           })}
