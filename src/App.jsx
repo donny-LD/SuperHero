@@ -5,7 +5,7 @@ import './App.css'
 const App = () => {
   const[favourites, setFavourites] = useState([]);
 
-  const handleAddToFaves =(Hero) => {
+  const handleAddToFaves =(hero) => {
     let newFaveArr = [...favourites];
     newFaveArr.push(hero);
     setFavourites(newFaveArr);
@@ -70,7 +70,7 @@ const HeroCard = (props) => {
         <p>VILLAIN: {props.heroObj.villain}</p>
       </div>
       )}
-     
+              {/* //because in the SHOW is in brackets there has to an arrow syntac  */}
       <button onClick={() => setShow(!show)}>{show ?"HIDE INFO" : "SHOW INFO"}</button>
       <button onClick={() => props.faveFunc(props.heroObj)}>Add to Faves</button>
     </>
